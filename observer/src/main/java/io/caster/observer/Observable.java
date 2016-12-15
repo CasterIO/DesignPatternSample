@@ -4,5 +4,5 @@ interface Observable<T> {
 
     void addObserver(Observer<T> observer);
 
-   void notifyObservers();
+    void notifyObservers();
 }
