@@ -12,6 +12,6 @@ public class SimpleObservableTest {
 
         observable.addObserver(simpleObserver);
         observable.addObserver(cheeringObserver);
-        ((SimpleObservable) observable).run();
+        observable.notifyObservers();
     }
 }

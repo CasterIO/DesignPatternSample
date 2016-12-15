@@ -12,7 +12,8 @@ public class SimpleObservable implements Observable<Integer>{
         observers.add(observer);
     }
 
-    public void run() {
+    @Override
+    public void notifyObservers() {
         for (int i = 0; i < 5; i++) {
            for (Observer<Integer> observer : observers) {
                observer.onDataAvailable(i);
