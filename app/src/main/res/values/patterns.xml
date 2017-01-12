@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="observer_pattern">Observer/Observable</string>
+
+    <string-array name="implemented_patterns">
+        <item>@string/observer_pattern</item>
+    </string-array>
+</resources>

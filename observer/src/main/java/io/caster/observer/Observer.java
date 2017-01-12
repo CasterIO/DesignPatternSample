@@ -1,6 +1,6 @@
 package io.caster.observer;
 
-interface Observer<T> {
+public interface Observer<T> {
 
     void onDataAvailable(T data);
 }

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/addSimpleObserver"
+        android:title="Add Observer"
+        android:titleCondensed="Add"
+        app:showAsAction="always|withText|always|withText" />
+
+    <item
+        android:id="@+id/notifyObservers"
+        android:title="Notify Observers"
+        android:titleCondensed="Notify"
+        app:showAsAction="always|withText|always|withText" />
+    <item
+        android:id="@+id/clearObservers"
+        android:title="Clear Observers"
+        android:titleCondensed="Clear"
+        app:showAsAction="always|withText|always|withText" />
+</menu>
