@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/managedIcon"
+        android:layout_width="48dp"
+        android:layout_height="match_parent"
+        android:text="M"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:background="@color/colorPrimary"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:layout_alignParentLeft="true"/>
+
+    <TextView
+        android:id="@+id/unmanagedIcon"
+        android:layout_width="48dp"
+        android:layout_height="match_parent"
+        android:text="U"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:background="@android:color/holo_red_light"
+        android:layout_alignParentLeft="true"/>
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="56dp"
+        android:gravity="center_vertical"/>
+
+    <TextView
+        android:id="@+id/numbers"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        tools:text="(3,5)"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center_vertical"/>
+
+</RelativeLayout>
