@@ -4,7 +4,7 @@ package it.tiwiz.chain.of.responsibility;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
-public class IntChainElement extends BaseElement<Integer>{
+class IntChainElement extends BaseElement<Integer>{
     private static final String TAG = "[" + IntChainElement.class.getSimpleName() + "]";
     private final int managedRequest;
 
