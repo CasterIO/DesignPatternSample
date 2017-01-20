@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="observer_pattern">Observer/Observable</string>
+    <string name="chain_of_responsibility">Chain of Responsibility</string>
 
     <string-array name="implemented_patterns">
         <item>@string/observer_pattern</item>
+        <item>@string/chain_of_responsibility</item>
     </string-array>
 </resources>
