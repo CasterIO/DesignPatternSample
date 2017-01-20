@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Design Patterns</string>
+    <string name="add_value_label">+</string>
 </resources>
