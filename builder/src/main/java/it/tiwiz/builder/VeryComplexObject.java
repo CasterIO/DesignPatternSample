@@ -8,14 +8,14 @@ public class VeryComplexObject {
     private final String first;
     private final String second;
     private final String third;
-    private final String forth;
+    private final String fourth;
 
     public VeryComplexObject(@NonNull String first, @NonNull String second,
-                             @NonNull String third, @NonNull String forth) {
+                             @NonNull String third, @NonNull String fourth) {
         this.first = first;
         this.second = second;
         this.third = third;
-        this.forth = forth;
+        this.fourth = fourth;
     }
 
     public String getFirst() {
@@ -30,7 +30,7 @@ public class VeryComplexObject {
         return third;
     }
 
-    public String getForth() {
-        return forth;
+    public String getFourth() {
+        return fourth;
     }
 }
