@@ -20,4 +20,19 @@ public class VeryComplexObjectTest {
         Assert.assertEquals(THIRD, obj.getThird());
         Assert.assertEquals(FOURTH, obj.getFourth());
     }
+
+    @Test
+    public void testBuilderCreatesCorrectlyTheObject() throws Exception {
+        VeryComplexObject obj = new VeryComplexObject.Builder()
+                .setSecond(SECOND)
+                .setFourth(FOURTH)
+                .setFirst(FIRST)
+                .setThird(THIRD)
+                .build();
+
+        Assert.assertEquals(FIRST, obj.getFirst());
+        Assert.assertEquals(SECOND, obj.getSecond());
+        Assert.assertEquals(THIRD, obj.getThird());
+        Assert.assertEquals(FOURTH, obj.getFourth());
+    }
 }
