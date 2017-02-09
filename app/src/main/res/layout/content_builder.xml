@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="io.caster.designpatterns.builder.BuilderActivity"
+    tools:showIn="@layout/activity_builder">
+
+    <LinearLayout
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="8dp">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/alertTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:inputType="text"
+                android:hint="@string/builder_alert_title"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/builder_alert_dialog_content_label"
+            android:layout_marginTop="16dp"
+            style="@style/TextAppearance.AppCompat.Headline"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/contentView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/builder_alert_content_view_label"/>
+
+            <RadioButton
+                android:id="@+id/message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/builder_alert_string_message_label"/>
+        </RadioGroup>
+
+        <Switch
+            android:id="@+id/dismissable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/builder_alert_can_be_dismissed"
+            style="@style/TextAppearance.AppCompat.Headline"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/builder_alert_buttons_label"
+            android:layout_marginTop="16dp"
+            style="@style/TextAppearance.AppCompat.Headline"/>
+
+        <CheckBox
+            android:id="@+id/positiveButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/builder_alert_positive_button_label"/>
+
+        <CheckBox
+            android:id="@+id/negativeButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/builder_alert_negative_button_label"/>
+
+        <CheckBox
+            android:id="@+id/neutralButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/builder_alert_neutral_button_label"/>
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

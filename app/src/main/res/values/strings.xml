@@ -1,4 +1,14 @@
 <resources>
     <string name="app_name">Design Patterns</string>
     <string name="add_value_label">+</string>
+    <string name="title_activity_builder">BuilderActivity</string>
+    <string name="builder_alert_title">Alert title</string>
+    <string name="builder_alert_content_view_label">Content view</string>
+    <string name="builder_alert_dialog_content_label">Content</string>
+    <string name="builder_alert_string_message_label">String message</string>
+    <string name="builder_alert_buttons_label">Buttons</string>
+    <string name="builder_alert_positive_button_label">Positive</string>
+    <string name="builder_alert_negative_button_label">Negative</string>
+    <string name="builder_alert_neutral_button_label">Neutral</string>
+    <string name="builder_alert_can_be_dismissed">Dismissable</string>
 </resources>
