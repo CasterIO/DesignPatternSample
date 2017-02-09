@@ -25,7 +25,7 @@
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".builder.BuilderActivity"
-            android:label="@string/title_activity_builder"
+            android:label="@string/builder"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
