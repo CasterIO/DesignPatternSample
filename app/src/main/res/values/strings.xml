@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Design Patterns</string>
     <string name="add_value_label">+</string>
-    <string name="title_activity_builder">BuilderActivity</string>
+    <string name="title_activity_builder">Builder Design Pattern</string>
     <string name="builder_alert_title">Alert title</string>
     <string name="builder_alert_content_view_label">Content view</string>
     <string name="builder_alert_dialog_content_label">Content</string>
