@@ -1,1 +1,1 @@
-include ':app', ':observer', ':chain-of-responsibility'
+include ':app', ':observer', ':chain-of-responsibility', ':builder'
