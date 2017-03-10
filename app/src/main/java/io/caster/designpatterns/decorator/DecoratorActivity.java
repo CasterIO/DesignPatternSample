@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import java.util.Locale;
+
 import io.caster.decorator.AdditionIntDecorator;
 import io.caster.decorator.BaseIntContainer;
 import io.caster.decorator.DoubleIntDecorator;
@@ -79,7 +81,13 @@ public class DecoratorActivity extends AppCompatActivity implements View.OnClick
     }
 
     private void showFormattedValue() {
-        outputText.setText(decorator.getFormattedValue());
+        outputText.setText(appendText());
         decorator = init();
+    }
+
+    private String appendText() {
+        String olderText = outputText.getText().toString();
+        String newText = String.format(Locale.getDefault(), "%s = %d\n", decorator.getFormattedValue(), decorator.getValue());
+        return olderText + newText;
     }
 }
