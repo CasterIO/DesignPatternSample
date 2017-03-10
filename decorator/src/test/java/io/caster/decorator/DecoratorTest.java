@@ -2,7 +2,9 @@ package io.caster.decorator;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import java.util.Locale;
+
+import static org.junit.Assert.assertEquals;
 
 
 public class DecoratorTest {
@@ -42,6 +44,40 @@ public class DecoratorTest {
 
         final int expectedValue = ADDITIONAL_VALUE + (BASE_VALUE * DOUBLE_COEFF);
         assertEquals(expectedValue, additionDecorator.getValue());
-
     }
+
+    @Test
+    public void decoratingItemWithAdditionShowsCorrectString() throws Exception {
+        SimpleIntContainer decorator = new AdditionIntDecorator(base, ADDITIONAL_VALUE);
+        String expectedValue = String.format(Locale.getDefault(), "%d + %d", BASE_VALUE, ADDITIONAL_VALUE);
+
+        assertEquals(expectedValue, decorator.getFormattedValue());
+    }
+
+    @Test
+    public void decoratingWithDoubleShowsCorrectString() throws Exception {
+        SimpleIntContainer doubleDecorator = new DoubleIntDecorator(base);
+        String expectedValue = String.format(Locale.getDefault(), "%d * %d", BASE_VALUE, DOUBLE_COEFF);
+
+        assertEquals(expectedValue, doubleDecorator.getFormattedValue());
+    }
+
+    @Test
+    public void decoratingItemsWithAdditionAndDoubleShowsCorrectString() throws Exception {
+        SimpleIntContainer additionDecorator = new AdditionIntDecorator(base, ADDITIONAL_VALUE);
+        SimpleIntContainer doubleDecorator = new DoubleIntDecorator(additionDecorator);
+        String expectedValue = String.format(Locale.getDefault(), "%d + %d * %d", BASE_VALUE, ADDITIONAL_VALUE, DOUBLE_COEFF);
+
+        assertEquals(expectedValue, doubleDecorator.getFormattedValue());
+    }
+
+    @Test
+    public void decoratingItemWithDoubleAndAdditionShowsCorrectString() throws Exception {
+        SimpleIntContainer doubleDecorator = new DoubleIntDecorator(base);
+        SimpleIntContainer additionDecorator = new AdditionIntDecorator(doubleDecorator, ADDITIONAL_VALUE);
+        String expectedValue = String.format(Locale.getDefault(), "%d * %d + %d", BASE_VALUE, DOUBLE_COEFF, ADDITIONAL_VALUE);
+
+        assertEquals(expectedValue, additionDecorator.getFormattedValue());
+    }
+
 }
