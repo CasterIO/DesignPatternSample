@@ -3,10 +3,12 @@
     <string name="observer_pattern">Observer/Observable</string>
     <string name="chain_of_responsibility">Chain of Responsibility</string>
     <string name="builder">Builder</string>
+    <string name="decorator">Decorator</string>
 
     <string-array name="implemented_patterns">
         <item>@string/observer_pattern</item>
         <item>@string/chain_of_responsibility</item>
         <item>@string/builder</item>
+        <item>@string/decorator</item>
     </string-array>
 </resources>
