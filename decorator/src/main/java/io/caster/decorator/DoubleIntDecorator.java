@@ -17,6 +17,7 @@ public class DoubleIntDecorator implements SimpleIntContainer{
 
     @Override
     public String getFormattedValue() {
-        return String.format(Locale.getDefault(), "%s * 2", decoratedItem.getFormattedValue());
+        return String.format(Locale.getDefault(),
+                "%s * 2", decoratedItem.getFormattedValue());
     }
 }

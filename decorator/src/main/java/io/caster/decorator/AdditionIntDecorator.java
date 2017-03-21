@@ -19,6 +19,7 @@ public class AdditionIntDecorator implements SimpleIntContainer{
 
     @Override
     public String getFormattedValue() {
-        return String.format(Locale.getDefault(), "%s + %d", decoratedItem.getFormattedValue(), plusValue);
+        return String.format(Locale.getDefault(), "%s + %d",
+                decoratedItem.getFormattedValue(), plusValue);
     }
 }
