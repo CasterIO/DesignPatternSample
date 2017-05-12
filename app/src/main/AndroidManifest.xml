@@ -41,6 +41,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="io.caster.designpatterns.MainActivity" />
         </activity>
+        <activity
+            android:name=".adapter.AdapterActivity"
+            android:label="@string/title_activity_adapter"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="io.caster.designpatterns.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
