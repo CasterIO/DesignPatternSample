@@ -10,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.RadioButton;
+import android.widget.TextView;
 
 import io.caster.decorator.Size;
 import io.caster.designpatterns.R;
@@ -19,6 +20,8 @@ public class DecoratorActivity extends AppCompatActivity
 
     private final DecoratorPresenter decoratorPresenter = new DecoratorPresenter();
     private DecoratorAnimator animator;
+
+    private TextView output;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +58,8 @@ public class DecoratorActivity extends AppCompatActivity
                 (Group) findViewById(R.id.coffee_group),
                 (Group) findViewById(R.id.toppings_group),
                 (FloatingActionButton) findViewById(R.id.fab));
+
+        output = findViewById(R.id.price_recap);
     }
 
     @Override
@@ -123,18 +128,15 @@ public class DecoratorActivity extends AppCompatActivity
                 decoratorPresenter.addCream();
                 break;
             case R.id.fab:
-                printCoffee();
+                output.setText(decoratorPresenter.getCoffeeDescription());
                 break;
             case R.id.clear_button:
                 decoratorPresenter.clear();
                 animator.showSize();
+                output.setText("");
                 break;
             default:
                 throw new IllegalArgumentException("Coffee or topping not supported!");
         }
-    }
-
-    private void printCoffee() {
-
     }
 }

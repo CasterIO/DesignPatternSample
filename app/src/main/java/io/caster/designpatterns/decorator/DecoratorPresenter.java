@@ -12,15 +12,15 @@ import io.caster.decorator.Coffee;
 import io.caster.decorator.Ingredient;
 import io.caster.decorator.Size;
 
-public class DecoratorPresenter {
+class DecoratorPresenter {
     private Size size = null;
     private Beverage beverage;
 
-    public void pickSize(Size size) {
+    void pickSize(Size size) {
         this.size = size;
     }
 
-    public void pickCoffee() {
+    void pickCoffee() {
         checkSize();
         beverage = new Coffee(size);
     }
@@ -31,12 +31,12 @@ public class DecoratorPresenter {
         }
     }
 
-    public void pickArabicCoffee() {
+    void pickArabicCoffee() {
         checkSize();
         beverage = new ArabicCoffee(size);
     }
 
-    public void addAlmondMilk() {
+    void addAlmondMilk() {
         checkCoffee();
         beverage = new AlmondMilk(beverage);
     }
@@ -47,32 +47,32 @@ public class DecoratorPresenter {
         }
     }
 
-    public void addCaramel() {
+    void addCaramel() {
         checkCoffee();
         beverage = new Caramel(beverage);
     }
 
-    public void addChocolate() {
+    void addChocolate() {
         checkCoffee();
         beverage = new Chocolate(beverage);
     }
 
-    public void addCream() {
+    void addCream() {
         checkCoffee();
         beverage = new Caramel(beverage);
     }
 
-    public void clear() {
+    void clear() {
         size = null;
         beverage = null;
     }
 
-    public String getCoffeeDescription() {
+    String getCoffeeDescription() {
         StringBuilder builder = new StringBuilder(getFormattedPrice());
 
         for (Ingredient current : beverage.getIngredients()) {
-            builder.append(current.getDescription());
             builder.append("\n");
+            builder.append(current.getDescription());
         }
 
         return builder.toString();
