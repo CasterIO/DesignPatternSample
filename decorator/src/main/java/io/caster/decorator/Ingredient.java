@@ -1,6 +1,8 @@
 package io.caster.decorator;
 
 
+import java.util.Locale;
+
 public final class Ingredient {
 
     private static final String WEIGHT = "g";
@@ -22,21 +24,21 @@ public final class Ingredient {
         return new Ingredient("Almond milk", 15, VOLUME);
     }
 
+    static Ingredient chocolate() {
+        return new Ingredient("Chocolate", 10, VOLUME);
+    }
+
+    static Ingredient caramel() {
+        return new Ingredient("Caramel", 2, VOLUME);
+    }
+
     private final String description;
-    private final float quantity;
-    private final String measureUnit;
 
     private Ingredient(String description, float quantity, String measureUnit) {
-        this.description = description;
-        this.quantity = quantity;
-        this.measureUnit = measureUnit;
+        this.description = String.format(Locale.getDefault(),"%s (%.2f %s)", description, quantity, measureUnit);
     }
 
     public String getDescription() {
         return description;
-    }
-
-    public String getQuantity() {
-        return quantity + " " + measureUnit;
     }
 }

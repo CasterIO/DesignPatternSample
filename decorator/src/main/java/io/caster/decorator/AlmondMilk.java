@@ -13,7 +13,7 @@ public class AlmondMilk implements Beverage {
     @Override
     public List<Ingredient> getIngredients() {
         List<Ingredient> ingredients = decorated.getIngredients();
-        ingredients.add(Ingredient.cream());
+        ingredients.add(Ingredient.almondMilk());
         return ingredients;
     }
 

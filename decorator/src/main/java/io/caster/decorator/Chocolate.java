@@ -12,7 +12,7 @@ public class Chocolate implements Beverage{
     @Override
     public List<Ingredient> getIngredients() {
         List<Ingredient> ingredients = decorated.getIngredients();
-        ingredients.add(Ingredient.cream());
+        ingredients.add(Ingredient.chocolate());
         return ingredients;
     }
 
