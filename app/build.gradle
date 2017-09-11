@@ -29,9 +29,9 @@ dependencies {
     compile project(':chain-of-responsibility')
     compile project(':builder')
     compile project(':decorator')
-    compile 'com.android.support:appcompat-v7:26.0.1'
-    compile 'com.android.support:recyclerview-v7:26.0.1'
+    compile 'com.android.support:appcompat-v7:26.0.2'
+    compile 'com.android.support:recyclerview-v7:26.0.2'
     compile 'com.android.support.constraint:constraint-layout:1.1.0-beta1'
-    compile 'com.android.support:design:26.0.1'
+    compile 'com.android.support:design:26.0.2'
     testCompile 'junit:junit:4.12'
 }
