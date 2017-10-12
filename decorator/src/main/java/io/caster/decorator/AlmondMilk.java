@@ -2,6 +2,8 @@ package io.caster.decorator;
 
 import java.util.List;
 
+import static io.caster.decorator.Prices.ALMOND_MILK;
+
 
 public class AlmondMilk implements Beverage {
     private final Beverage decorated;
@@ -19,6 +21,6 @@ public class AlmondMilk implements Beverage {
 
     @Override
     public float getPrice() {
-        return 2 + decorated.getPrice();
+        return ALMOND_MILK.getValue() + decorated.getPrice();
     }
 }

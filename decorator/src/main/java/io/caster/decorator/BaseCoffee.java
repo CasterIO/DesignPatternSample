@@ -9,10 +9,10 @@ public abstract class BaseCoffee implements Beverage{
     private final List<Ingredient> ingredients;
     private final float price;
 
-    BaseCoffee(Size size, Ingredient ingredient, float priceCoefficient) {
+    BaseCoffee(Size size, Ingredient ingredient, Prices priceCoefficient) {
         ingredients = new ArrayList<>(1);
         ingredients.add(ingredient);
-        price = size.getValue() * priceCoefficient;
+        price = priceCoefficient.withSize(size);
     }
 
     @Override

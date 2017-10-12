@@ -3,6 +3,8 @@ package io.caster.decorator;
 
 import java.util.List;
 
+import static io.caster.decorator.Prices.CARAMEL;
+
 public class Caramel implements Beverage {
     private final Beverage decorated;
 
@@ -19,6 +21,6 @@ public class Caramel implements Beverage {
 
     @Override
     public float getPrice() {
-        return 1.4f + decorated.getPrice();
+        return CARAMEL.getValue() + decorated.getPrice();
     }
 }
