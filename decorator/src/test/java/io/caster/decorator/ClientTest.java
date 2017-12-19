@@ -7,6 +7,7 @@ import static io.caster.decorator.Prices.ARABIC_COFFEE;
 import static io.caster.decorator.Prices.CARAMEL;
 import static io.caster.decorator.Prices.CHOCOLATE;
 import static io.caster.decorator.Prices.COFFEE;
+import static io.caster.decorator.Prices.PUMPKIN_SPICE;
 import static io.caster.decorator.Size.M;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -46,5 +47,17 @@ public class ClientTest {
                 .isEqualTo(expectedPrice);
     }
 
+    @Test
+    public void fourth_client() throws Exception {
+        Beverage test = new PumpkinSpice(
+                new Chocolate(
+                        new ArabicCoffee(M)
+                )
+        );
 
+        float expectedPrice = PUMPKIN_SPICE.getValue() + CHOCOLATE.getValue()
+                + ARABIC_COFFEE.withSize(M);
+
+        assertThat(test.getPrice()).isEqualTo(expectedPrice);
+    }
 }

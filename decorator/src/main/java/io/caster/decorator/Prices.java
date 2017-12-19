@@ -7,7 +7,8 @@ public enum Prices {
     CREAM(.5f),
     CARAMEL(1.4f),
     CHOCOLATE(1.8f),
-    ALMOND_MILK(2f);
+    ALMOND_MILK(2f),
+    PUMPKIN_SPICE(1f);
 
     private final float value;
 

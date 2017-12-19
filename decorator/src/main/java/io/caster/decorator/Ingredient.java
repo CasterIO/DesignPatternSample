@@ -32,6 +32,10 @@ public final class Ingredient {
         return new Ingredient("Caramel", 2, VOLUME);
     }
 
+    static Ingredient pumpkinSpice() {
+        return new Ingredient("Pumpkin Spice", 15, VOLUME);
+    }
+
     private final String description;
 
     private Ingredient(String description, float quantity, String measureUnit) {
