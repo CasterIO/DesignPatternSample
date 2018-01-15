@@ -35,7 +35,7 @@ public class MainView {
     private MainView(@NonNull final Activity target) {
         patterns = target.getResources().getStringArray(R.array.implemented_patterns);
         listener = bindListenerFrom(target);
-        patternsList = (ListView) target.findViewById(R.id.patternList);
+        patternsList = target.findViewById(R.id.patternList);
     }
 
     private OnPatternSelectedListener bindListenerFrom(Context context) {
