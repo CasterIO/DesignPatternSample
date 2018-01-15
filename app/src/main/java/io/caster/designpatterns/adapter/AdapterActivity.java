@@ -13,7 +13,6 @@ import io.caster.designpatterns.R;
 public class AdapterActivity extends AppCompatActivity implements View.OnClickListener{
 
     private RecyclerView patternList;
-    private RecyclerView.LayoutManager layoutManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,9 +23,7 @@ public class AdapterActivity extends AppCompatActivity implements View.OnClickLi
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         patternList = findViewById(R.id.patternList);
-        layoutManager = new LinearLayoutManager(this);
-
-        patternList.setLayoutManager(layoutManager);
+        patternList.setLayoutManager(new LinearLayoutManager(this));
 
         createDataSource();
     }
