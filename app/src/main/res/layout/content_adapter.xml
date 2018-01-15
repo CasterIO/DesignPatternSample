@@ -9,4 +9,31 @@
     tools:context="io.caster.designpatterns.adapter.AdapterActivity"
     tools:showIn="@layout/activity_adapter">
 
+
+    <Button
+        android:id="@+id/btnLmLinear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Linear"
+        app:layout_constraintEnd_toStartOf="@+id/btnLmGrid"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnLmGrid"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Grid"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnLmLinear"
+        app:layout_constraintTop_toTopOf="@+id/btnLmLinear" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/patternList"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLmLinear" />
 </android.support.constraint.ConstraintLayout>
