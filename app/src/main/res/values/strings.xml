@@ -11,4 +11,6 @@
     <string name="builder_alert_neutral_button_label">Neutral</string>
     <string name="builder_alert_can_be_dismissed">Cancelable</string>
     <string name="title_activity_adapter">AdapterActivity</string>
+    <string name="button_caption_linear">Linear</string>
+    <string name="button_caption_grid">Grid</string>
 </resources>

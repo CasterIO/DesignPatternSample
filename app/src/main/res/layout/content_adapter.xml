@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="16dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="io.caster.designpatterns.adapter.AdapterActivity"
     tools:showIn="@layout/activity_adapter">
@@ -14,7 +15,8 @@
         android:id="@+id/btnLmLinear"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Linear"
+        android:text="@string/button_caption_linear"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
         app:layout_constraintEnd_toStartOf="@+id/btnLmGrid"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -23,7 +25,8 @@
         android:id="@+id/btnLmGrid"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Grid"
+        android:text="@string/button_caption_grid"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnLmLinear"
         app:layout_constraintTop_toTopOf="@+id/btnLmLinear" />
@@ -32,7 +35,7 @@
         android:id="@+id/patternList"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnLmLinear" />
